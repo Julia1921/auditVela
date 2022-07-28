@@ -1,0 +1,38 @@
+@import '../base/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1350px;
+$md1: $maxWidthContainer + 12px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+
+$whiteTextColor: #fff;
+$mainTextColor: #000000;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 21.94 / 18;
+	overflow-x: hidden;
+}
+
+._container{
+	max-width: $maxWidthContainer;
+	@include adaptiv-value("padding-left", 19, 20,1);
+	@include adaptiv-value("padding-right", 19, 23,1);
+	margin: 0 auto;
+  
+}
